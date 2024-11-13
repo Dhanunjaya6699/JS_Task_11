@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_1</title>
+</head>
+
+<body>
+    <script>
+        //easy problem1
+        var totalAmount = parseInt(prompt("Enter your total amount : "))
+
+        if (totalAmount > 500) {
+            console.log(`Your Total price is : `, totalAmount - (totalAmount * (20 / 100)), `=> (${totalAmount}-20% of ${totalAmount})`)
+        }
+        else if (totalAmount >= 200 && totalAmount <= 500) {
+            console.log(`Your Total price is : `, totalAmount - (totalAmount * (10 / 100)), `=> (${totalAmount}-10% of ${totalAmount})`)
+        }
+        else if (totalAmount < 200 && totalAmount > 0) {
+            console.log(`No discount`)
+        }
+        else (console.log(`Enter the proper amount`))
+
+        //easy problem2
+        var temperature = parseInt(prompt("Enter your temperature : "))
+
+        if (temperature > 40) {
+            console.log("Extream Heat")
+        }
+        else if (temperature >= 20 && temperature <= 40) {
+            console.log("Moderate")
+        }
+        else if (temperature < 20) {
+            console.log("Cold")
+        }
+        else (console.log("Enter temperature in Number"))
+
+        //easy problem3
+        var marks = parseInt(prompt("Enter your total marks : "))
+
+        if (marks >= 90 && marks <= 100) {
+            console.log("Your grade is : A+")
+        }
+        else if (marks >= 80 && marks <= 89) {
+            console.log("Your grade is : A")
+        }
+        else if (marks >= 70 && marks <= 79) {
+            console.log("Your grade is : B")
+        }
+        else if (marks <= 69 && marks >= 0) {
+            console.log("Your grade is : C")
+        }
+        else (console.log("Enter your proper marks"))
+
+        //easy problem4
+        var lateDays = parseInt(prompt("Enter your number of late days : "))
+
+        if (lateDays >= 1 && lateDays <= 5) {
+            console.log("Total fine amonut is : ", lateDays * 2)
+        }
+        else if (lateDays >= 6 && lateDays <= 10) {
+            console.log("Total fine amonut is : ", lateDays * 3)
+        }
+        else if (lateDays > 10) {
+            console.log("Total fine amonut is : ", lateDays * 5)
+        }
+        else (console.log("Enter your proper days"))
+
+        //easy problem5
+        var favFood = String(prompt("Enter your favourite food : ")).toLowerCase()
+
+        if (favFood == "pizza") {
+            console.log("Pizza lover!")
+        }
+        else if (favFood == "pasta") {
+            console.log("Pasta lover!")
+        }
+        else if (favFood == "burger") {
+            console.log("Burger lover!")
+        }
+        else (console.log("Invalid Choice"))
+
+
+        // medium problem1
+        var age = parseInt(prompt("Enter your age : "))
+        var income = parseFloat(prompt("Enter your income : "))
+        var hasCriminalRecords = prompt("has criminal records True/False ").toLowerCase()
+
+        if ((age >= 21 && age <= 60) && (income >= 20000) && (hasCriminalRecords == "false")) {
+            console.log("Eligible for loan")
+        }
+        else { console.log("Not eligible for loan") }
+
+        // medium problem2
+        var salesTarget = Number(prompt("Enter your sales target in percentage : "))
+        var monthlySalary = Number(prompt("Enter your salary : "))
+
+        if (salesTarget > 100) {
+            console.log("Your bonus is = ", monthlySalary * (20 / 100))
+        }
+        else if (salesTarget <= 100) {
+            console.log("No Bonus")
+        }
+
+        // medium problem3
+        var totalClasses = Number(prompt("Enter the total classes : "))
+        var classesAttented = Number(prompt("Enter the number of classes you are attended : "))
+
+        if (classesAttented >= (totalClasses * (75 / 100))) {
+            console.log("Eligible")
+        }
+        else {
+            console.log("Not Eligible")
+        }
+
+        // medium problem4
+        var purchaseAmount = parseFloat(prompt("Enter your total amount : "))
+
+        if (purchaseAmount > 0 && purchaseAmount < 100) {
+            console.log(((purchaseAmount / 10) * 1) + " points")
+        }
+        else if (purchaseAmount >= 100) {
+            console.log(((purchaseAmount / 10) * 2) + " points")
+        }
+        else { console.log("Enter your correct purchase amount") }
+
+        // medium problem5
+        var yourText = prompt("Enter your text here : ")
+        var letter = prompt("Enter the letter here : ")
+        sum = 0;
+
+        for (i = 0; i < yourText.length; i = i + 1) {
+            if (yourText[i] == letter) {
+                sum = sum + 1
+            }
+        }
+        console.log(`"${letter}" Number of times occured = ` + sum)
+
+
+        // hard problem1
+        var currentDay = parseInt(prompt("Enter the today number here : "))
+        var expiryDay = parseInt(prompt("Enter the expiry number here : "))
+
+        if (currentDay > expiryDay) {
+            console.log("It's expired")
+        }
+        else { console.log("Not expired") }
+
+        // hard problem2
+        var arrayOfIntegers = prompt("Enter the array of integers here : ")
+
+        for (i = 0; i < arrayOfIntegers.length; i = i + 1) {
+            if ((arrayOfIntegers[i] % 2) == (arrayOfIntegers[i + 1] % 2)) {
+                console.log("Patter broken")
+            }
+            else { console.log("followed") }
+        }
+
+        // hard problem3
+        var balance = Number(prompt("Enter your balance here : "))
+        var withdrawlAmount = Number(prompt("Enter your withdrawl amount here : "))
+
+        if (balance >= withdrawlAmount) {
+            console.log("Transaction Approved")
+        }
+        else { console.log("Insufficient Funds") }
+
+        // hard problem4
+        var givenString = prompt("Enter your text : ")
+
+        for (i = 0; i < givenString.length; i = i + 1) {
+            if ((i == "a" || i == "e" || i == "i" || i == "o" || i == "u") && (i + 1 != "a" && i + 1 != "e" && i + 1 != "i" && i + 1 != "o" && i + 1 != "u")) {
+                console.log("pattern followed")
+            }
+            else { console.log("not followed") }
+        }
+        //p4 not completed properly
+
+        // hard problem5
+        var balance = prompt("Enter the number here : ")
+        sum = 0;
+
+        for (i = 0; i < balance.length; i = i + 1) {
+            sum = sum + +balance[i]
+        }
+        console.log("Sum of the numbers = " + sum);
+        if (sum % 2 == 0) {
+            console.log("Sum is Even")
+        }
+        else {
+            console.log("Sum is Odd")
+        }
+
+    </script>
+</body>
+
+</html>
